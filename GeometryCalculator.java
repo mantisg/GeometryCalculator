@@ -4,6 +4,9 @@ public class GeometryCalculator{
       Scanner keyboard = new Scanner(System.in);
       int menuChoice;
       char continueKey;
+      int numberOfSides;
+      double angleDegrees;
+      double knownAngles;
       double returnValue;
       double radiusOfACircle;
       double rectangleSideLength;
@@ -72,16 +75,18 @@ public class GeometryCalculator{
                System.out.println("The perimeter of the triangle is " + returnValue);
                break;
                
-               /**case 7:
+               case 7:
 
                   System.out.println("Choose how many sides are in the shape \n" +
                                      "(the calculator will only handle up to 12 sides): ");
-                  
-                  sides = keyboard.nextInt();
-                  
-                  numberOfSides(sides);
-                  
-                  break;    */               
+                  numberOfSides = keyboard.nextInt();
+                  Angles polygon1 = new Angles(numberOfSides);
+                  polygon1.setTotalDegrees();
+                  angleDegrees = polygon1.getAngles();
+                  returnValue = polygon1.getMissingAngle();
+                  System.out.println("The degree of the missing angle is: " + 
+                                     returnValue);
+                  break;              
                   
             default:
                System.out.println("You did not enter " +
@@ -106,5 +111,4 @@ public class GeometryCalculator{
       System.out.println("7. Find missing angle value of a shape");
       System.out.print("Enter the number of your choice: ");
    }
-   
 }
