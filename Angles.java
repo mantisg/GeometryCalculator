@@ -16,18 +16,6 @@ public class Angles{
    public void setNumOfSides(int numSides){
       numberOfSides = numSides;
    }
-   /**public void setTotalDegrees(int numSides){
-      if (numSides == 3) totalDegrees = 180;
-      else if (numSides == 4) totalDegrees = 360;
-      else if (numSides == 5) totalDegrees = 540;
-      else if (numSides == 6) totalDegrees = 720;
-      else if (numSides == 7) totalDegrees = 900;
-      else if (numSides == 8) totalDegrees = 1080;
-      else if (numSides == 9) totalDegrees = 1260;
-      else if (numSides == 10) totalDegrees = 1440;
-      else if (numSides == 11) totalDegrees = 1620;
-      else if (numSides == 12) totalDegrees = 1800;
-   } */
    public void setTotalDegrees(){
       switch (numberOfSides){
          case 3: totalDegrees = 180; break;
